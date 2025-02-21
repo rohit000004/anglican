@@ -584,7 +584,7 @@ export default function Doors() {
 
 
                     {currentstep == 2 && !doorlist && (
-                        <div className="w-[400px]">
+                        <div className="md:w-[400px]">
                             <div className="text-center font-bold text-[20px] py-2">{doorstype} Door Options</div>
                             <p className="text-center text-[12px] pb-2">Choose a style, colour, glass and hardware for your new door</p>
 

@@ -27,7 +27,7 @@ export default function Front() {
 
                     <div className="md:flex justify-center gap-5 items-center relative z-10">
 
-                        <div className="bg-white p-6 rounded-lg shadow-lg relative z-20 px-[150px]">
+                        <div className="bg-white p-6 rounded-lg shadow-lg relative z-20 px-10  md:px-[150px]">
                             <div className="text-center text-[25px] md:w-[280px] capitalize">Design your doors and windows online</div>
 
                             <div className="grid grid-cols-3 grid-rows-2 gap-y-2 justify-items-center w-full max-w-md mx-auto mt-5">
@@ -48,7 +48,7 @@ export default function Front() {
 
                         </div>
 
-                        <div className="relative z-10">
+                        <div className="relative z-10   md:mt-0 mt-10">
                             <img src="/first.webp" className="w-full h-auto object-cover" />
                         </div>
                     </div>
@@ -64,7 +64,7 @@ export default function Front() {
                         <div className="text-center text-[28px]">Design and visualise your new uPVC windows and composite or uPVC door</div>
                     </div>
 
-                    <div className="md:w-[900px] bg-cover bg-center mx-auto my-8 py-[200px]" style={{ backgroundImage: "url('/bg.jpg')" }}>
+                    <div className="md:w-[900px] bg-cover bg-center mx-auto my-8 px-5 py-[200px]" style={{ backgroundImage: "url('/bg.jpg')" }}>
 
                         <div className="text-[25px] font-bold text-white text-center">Which product would you like to design & visualise?</div>
                         <div className=" font-bold text-white text-center">Select the products you wish to design:</div>

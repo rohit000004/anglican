@@ -680,7 +680,7 @@ export default function WindowsDoors() {
                                 {step2selectedbtn === "windowStyles" &&
                                     <>
                                         <div className="h-[300px] overflow-auto">
-                                            <div className="flex flex-wrap gap-3">
+                                            <div className="flex justify-center flex-wrap gap-3">
                                                 {WindowStyle.map((style, index) => (
                                                     <div key={index} onClick={() => handleWindowSelection("wstyle", style)}
                                                         className={`hover:bg-[#e2f4f4] cursor-pointer hover:opacity-75 ${values?.window?.wstyle?.image === style?.image ? 'border-[3px] border-[orange] bg-[#e2f4f4]' : ''}`}
@@ -808,11 +808,11 @@ export default function WindowsDoors() {
 
 
                     {currentstep == 3 && !doorlist && (
-                        <div className="w-[400px]">
+                        <div className="md:w-[400px]">
                             <div className="text-center font-bold text-[20px] py-2">{doorstype} Door Options</div>
                             <p className="text-center text-[12px] pb-2">Choose a style, colour, glass and hardware for your new door</p>
 
-                            <div className="flex justify-center gap-4 items-center my-3">
+                            <div className="flex flex-wrap justify-center gap-4 items-center my-3">
                                 <button onClick={() => setstep3selectedbtn("DoorStyles")}
                                     className={`px-2 py-1 text-[11px] border ${step3selectedbtn === "DoorStyles" ? "bg-[#f7a829] text-white" : "bg-gray-200"}`}
                                 > Door Styles</button>
@@ -870,7 +870,7 @@ export default function WindowsDoors() {
                                                 <div className="text-[12px] font-bold mt-5">Classic GRP Colors</div>
                                                 <p className="text-[11px]">Choose the External color of your door</p>
 
-                                                <div className="flex flex-wrap gap-3 py-3">
+                                                <div className="flex justify-center flex-wrap gap-3 py-3">
                                                     {ClassicColor.map((color, index) => (
                                                         <div key={index} onClick={() => handleDoorSelection("ExternalColor", color)} >
                                                             <div className={`hover:bg-[#e2f4f4] rounded-[50%] w-[50px] cursor-pointer hover:opacity-75 ${values?.door?.ExternalColor?.name === color?.name ? 'border-[2px] border-[orange] bg-[#e2f4f4]' : 'border border-[grey]'}`}>
@@ -883,7 +883,7 @@ export default function WindowsDoors() {
 
                                                 <div className="text-[12px] font-bold mt-5">Premium GRP Colors</div>
                                                 <p className="text-[11px]">Choose the External color of your door</p>
-                                                <div className="flex  flex-wrap gap-3 pt-3">
+                                                <div className="flex justify-center flex-wrap gap-3 pt-3">
                                                     {PremiumColor.map((color, index) => (
                                                         <div key={index} onClick={() => handleDoorSelection("ExternalColor", color)} >
                                                             <div className={`hover:bg-[#e2f4f4] rounded-[50%] w-[50px] cursor-pointer hover:opacity-75 ${values?.door?.ExternalColor?.name === color?.name ? 'border-[2px] border-[orange] bg-[#e2f4f4]' : 'border border-[grey]'}`}>
