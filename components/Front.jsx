@@ -32,9 +32,9 @@ export default function Front() {
 
                             <div className="grid grid-cols-3 grid-rows-2 gap-y-2 justify-items-center w-full max-w-md mx-auto mt-5">
 
-                                <div className="rounded-full bg-orange-500 text-white w-10 h-10 flex justify-center items-center font-bold">1</div>
-                                <div className="border-4 border-orange-500 text-orange-500 w-10 h-10 flex justify-center items-center font-bold rounded-full">2</div>
-                                <div className="border-4 border-orange-500 text-orange-500 w-10 h-10 flex justify-center items-center font-bold rounded-full">3</div>
+                                <div className="rounded-full bg-[#007fab] text-white w-10 h-10 flex justify-center items-center font-bold">1</div>
+                                <div className="border-4 border-[#007fab] text-[#007fab] w-10 h-10 flex justify-center items-center font-bold rounded-full">2</div>
+                                <div className="border-4 border-[#007fab] text-[#007fab] w-10 h-10 flex justify-center items-center font-bold rounded-full">3</div>
 
 
                                 <div className="text-center font-medium">Style</div>
@@ -43,7 +43,7 @@ export default function Front() {
                             </div>
 
                             <div className="flex justify-center">
-                                <button onClick={handle1} className="bg-orange-500 text-white px-3 py-1.5 rounded-md font-bold">Start Designing</button>
+                                <button onClick={handle1} className="bg-[#007fab] text-white px-3 py-1.5 rounded-md font-bold">Start Designing</button>
                             </div>
 
                         </div>

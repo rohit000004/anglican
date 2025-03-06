@@ -35,6 +35,7 @@ const doorSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
+        user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
 
     },
     {

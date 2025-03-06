@@ -629,11 +629,11 @@ export default function WindowsDoors() {
             <div className=" my-[1%] md:w-[1100px]">
                 <div className="flex  justify-between px-5">
                     <div className="">
-                        {currentstep >= startstep + 1 && <button className="bg-[#f7a829] text-white font-bold py-2 px-3 rounded-md hover:scale-105 transition-transform text-sm active:translate-y-1" onClick={prevStep}> {`< PREVIOUS`}</button>}
+                        {currentstep >= startstep + 1 && <button className="bg-[#007fab] text-white font-bold py-2 px-3 rounded-md hover:scale-105 transition-transform text-sm active:translate-y-1" onClick={prevStep}> {`< PREVIOUS`}</button>}
                     </div>
 
                     <div className=" ">
-                        {currentstep <= maxsteps && active && <button className="bg-[#f7a829] text-white font-bold py-2 px-3 rounded-md hover:scale-105 transition-transform text-sm tracking-wider active:translate-y-1" onClick={nextStep}>{`NEXT >`}</button>}
+                        {currentstep <= maxsteps && active && <button className="bg-[#007fab] text-white font-bold py-2 px-3 rounded-md hover:scale-105 transition-transform text-sm tracking-wider active:translate-y-1" onClick={nextStep}>{`NEXT >`}</button>}
                     </div>
                 </div>
             </div>
@@ -647,7 +647,7 @@ export default function WindowsDoors() {
                             <div className="flex flex-wrap justify-center gap-5 pb-5">
                                 {House.map((house) => (
                                     <div key={house.name} onClick={() => handleHouseSelect(house)}
-                                        className={`hover:bg-[#e2f4f4] w-[130px] cursor-pointer hover:opacity-75 ${selectedhouse?.name === house?.name ? 'border-[5px]  border-[orange] bg-[#e2f4f4]' : ''
+                                        className={`hover:bg-[#e2f4f4] w-[130px] cursor-pointer hover:opacity-75 ${selectedhouse?.name === house?.name ? 'border-[5px]  border-[#007fab] bg-[#e2f4f4]' : ''
                                             }`}
                                     >
                                         <img src={house.image} height={130} width={130} className="" />
@@ -664,13 +664,13 @@ export default function WindowsDoors() {
 
                             <div className="flex justify-center gap-4 items-center my-3">
                                 <button onClick={() => setstep2selectedbtn("windowStyles")}
-                                    className={`px-2 py-1 text-[11px] border ${step2selectedbtn === "windowStyles" ? "bg-[#f7a829] text-white" : "bg-gray-200"}`}
+                                    className={`px-2 py-1 text-[11px] border ${step2selectedbtn === "windowStyles" ? "bg-[#007fab] text-white" : "bg-gray-200"}`}
                                 > Window Styles</button>
                                 <button onClick={() => setstep2selectedbtn("windowColors")}
-                                    className={`px-2 py-1 text-[11px] border ${step2selectedbtn === "windowColors" ? "bg-[#f7a829] text-white" : "bg-gray-200"}`}
+                                    className={`px-2 py-1 text-[11px] border ${step2selectedbtn === "windowColors" ? "bg-[#007fab] text-white" : "bg-gray-200"}`}
                                 > Window Colors</button>
                                 <button onClick={() => setstep2selectedbtn("windowHardware")}
-                                    className={`px-2 py-1 text-[11px] border ${step2selectedbtn === "windowHardware" ? "bg-[#f7a829] text-white" : "bg-gray-200"}`}
+                                    className={`px-2 py-1 text-[11px] border ${step2selectedbtn === "windowHardware" ? "bg-[#007fab] text-white" : "bg-gray-200"}`}
                                 > Window Hardware</button>
                             </div>
 
@@ -683,7 +683,7 @@ export default function WindowsDoors() {
                                             <div className="flex justify-center flex-wrap gap-3">
                                                 {WindowStyle.map((style, index) => (
                                                     <div key={index} onClick={() => handleWindowSelection("wstyle", style)}
-                                                        className={`hover:bg-[#e2f4f4] cursor-pointer hover:opacity-75 ${values?.window?.wstyle?.image === style?.image ? 'border-[3px] border-[orange] bg-[#e2f4f4]' : ''}`}
+                                                        className={`hover:bg-[#e2f4f4] cursor-pointer hover:opacity-75 ${values?.window?.wstyle?.image === style?.image ? 'border-[3px] border-[#007fab] bg-[#e2f4f4]' : ''}`}
                                                     >
                                                         <img src={style.image} height={80} width={80} className="object-contain" />
                                                     </div>
@@ -703,7 +703,7 @@ export default function WindowsDoors() {
                                         <div className="flex flex-wrap gap-5 py-3">
                                             {WindowColorInside.map((color, index) => (
                                                 <div key={index} onClick={() => handleWindowSelection("color", color)} >
-                                                    <div className={`hover:bg-[#e2f4f4] rounded-[50%] w-[50px] cursor-pointer hover:opacity-75 ${values?.window?.color?.name === color?.name ? 'border-[2px] border-[orange] bg-[#e2f4f4]' : 'border border-[grey]'}`}>
+                                                    <div className={`hover:bg-[#e2f4f4] rounded-[50%] w-[50px] cursor-pointer hover:opacity-75 ${values?.window?.color?.name === color?.name ? 'border-[2px] border-[#007fab] bg-[#e2f4f4]' : 'border border-[grey]'}`}>
                                                         <img src={color.color} height={50} width={50} className="object-contain rounded-[50%]" />
                                                     </div>
                                                     <div className="text-[10px] py-2">{color.name}</div>
@@ -718,7 +718,7 @@ export default function WindowsDoors() {
                                         <div className="flex  flex-wrap gap-5 py-3">
                                             {WindowColorOutside.map((color, index) => (
                                                 <div key={index} onClick={() => handleWindowSelection("color", color)} >
-                                                    <div className={`hover:bg-[#e2f4f4] rounded-[50%] w-[50px] cursor-pointer hover:opacity-75 ${values?.window?.color?.name === color?.name ? 'border-[2px] border-[orange] bg-[#e2f4f4]' : 'border border-[grey]'}`}>
+                                                    <div className={`hover:bg-[#e2f4f4] rounded-[50%] w-[50px] cursor-pointer hover:opacity-75 ${values?.window?.color?.name === color?.name ? 'border-[2px] border-[#007fab] bg-[#e2f4f4]' : 'border border-[grey]'}`}>
                                                         <img src={color.color} height={50} width={50} className="object-contain rounded-[50%]" />
                                                     </div>
                                                     <div className="text-[10px] py-2">{color.name}</div>
@@ -740,7 +740,7 @@ export default function WindowsDoors() {
                                         <div className="flex flex-wrap gap-5 py-3">
                                             {WindowHardware.map((hardware, index) => (
                                                 <div key={index} onClick={() => handleWindowSelection("hardwarecolor", hardware)}
-                                                    className={`hover:bg-[#e2f4f4] p-2 cursor-pointer hover:opacity-75 ${values?.window?.hardwarecolor?.image === hardware?.image ? 'border-[2px] border-[orange] bg-[#e2f4f4]' : ''}`}
+                                                    className={`hover:bg-[#e2f4f4] p-2 cursor-pointer hover:opacity-75 ${values?.window?.hardwarecolor?.image === hardware?.image ? 'border-[2px] border-[#007fab] bg-[#e2f4f4]' : ''}`}
                                                 >
                                                     <img src={hardware.image} height={65} width={65} className="object-contain" />
                                                 </div>
@@ -814,16 +814,16 @@ export default function WindowsDoors() {
 
                             <div className="flex flex-wrap justify-center gap-4 items-center my-3">
                                 <button onClick={() => setstep3selectedbtn("DoorStyles")}
-                                    className={`px-2 py-1 text-[11px] border ${step3selectedbtn === "DoorStyles" ? "bg-[#f7a829] text-white" : "bg-gray-200"}`}
+                                    className={`px-2 py-1 text-[11px] border ${step3selectedbtn === "DoorStyles" ? "bg-[#007fab] text-white" : "bg-gray-200"}`}
                                 > Door Styles</button>
                                 <button onClick={() => setstep3selectedbtn("DoorColors")}
-                                    className={`px-2 py-1 text-[11px] border ${step3selectedbtn === "DoorColors" ? "bg-[#f7a829] text-white" : "bg-gray-200"}`}
+                                    className={`px-2 py-1 text-[11px] border ${step3selectedbtn === "DoorColors" ? "bg-[#007fab] text-white" : "bg-gray-200"}`}
                                 > Door Colors</button>
                                 <button onClick={() => setstep3selectedbtn("DoorHardware")}
-                                    className={`px-2 py-1 text-[11px] border ${step3selectedbtn === "DoorHardware" ? "bg-[#f7a829] text-white" : "bg-gray-200"}`}
+                                    className={`px-2 py-1 text-[11px] border ${step3selectedbtn === "DoorHardware" ? "bg-[#007fab] text-white" : "bg-gray-200"}`}
                                 > Door Hardware</button>
                                 <button onClick={() => setstep3selectedbtn("DoorGlass")}
-                                    className={`px-2 py-1 text-[11px] border ${step3selectedbtn === "DoorGlass" ? "bg-[#f7a829] text-white" : "bg-gray-200"}`}
+                                    className={`px-2 py-1 text-[11px] border ${step3selectedbtn === "DoorGlass" ? "bg-[#007fab] text-white" : "bg-gray-200"}`}
                                 > Door Glass</button>
                             </div>
 
@@ -836,7 +836,7 @@ export default function WindowsDoors() {
                                             <div className="flex flex-wrap gap-3">
                                                 {Style.map((style, index) => (
                                                     <div key={index} onClick={() => handleDoorSelection("dstyle", style)}
-                                                        className={`hover:bg-[#e2f4f4] cursor-pointer hover:opacity-75 ${values?.door?.dstyle?.image === style?.image ? 'border-[3px] border-[orange] bg-[#e2f4f4]' : ''}`}
+                                                        className={`hover:bg-[#e2f4f4] cursor-pointer hover:opacity-75 ${values?.door?.dstyle?.image === style?.image ? 'border-[3px] border-[#007fab] bg-[#e2f4f4]' : ''}`}
                                                     >
                                                         <img src={style.image} height={35} width={35} className="object-contain" />
                                                     </div>
@@ -873,7 +873,7 @@ export default function WindowsDoors() {
                                                 <div className="flex justify-center flex-wrap gap-3 py-3">
                                                     {ClassicColor.map((color, index) => (
                                                         <div key={index} onClick={() => handleDoorSelection("ExternalColor", color)} >
-                                                            <div className={`hover:bg-[#e2f4f4] rounded-[50%] w-[50px] cursor-pointer hover:opacity-75 ${values?.door?.ExternalColor?.name === color?.name ? 'border-[2px] border-[orange] bg-[#e2f4f4]' : 'border border-[grey]'}`}>
+                                                            <div className={`hover:bg-[#e2f4f4] rounded-[50%] w-[50px] cursor-pointer hover:opacity-75 ${values?.door?.ExternalColor?.name === color?.name ? 'border-[2px] border-[#007fab] bg-[#e2f4f4]' : 'border border-[grey]'}`}>
                                                                 <img src={color.color} height={50} width={50} className="object-contain rounded-[50%]" />
                                                             </div>
                                                             <div className="text-[10px] py-2">{color.name}</div>
@@ -886,7 +886,7 @@ export default function WindowsDoors() {
                                                 <div className="flex justify-center flex-wrap gap-3 pt-3">
                                                     {PremiumColor.map((color, index) => (
                                                         <div key={index} onClick={() => handleDoorSelection("ExternalColor", color)} >
-                                                            <div className={`hover:bg-[#e2f4f4] rounded-[50%] w-[50px] cursor-pointer hover:opacity-75 ${values?.door?.ExternalColor?.name === color?.name ? 'border-[2px] border-[orange] bg-[#e2f4f4]' : 'border border-[grey]'}`}>
+                                                            <div className={`hover:bg-[#e2f4f4] rounded-[50%] w-[50px] cursor-pointer hover:opacity-75 ${values?.door?.ExternalColor?.name === color?.name ? 'border-[2px] border-[#007fab] bg-[#e2f4f4]' : 'border border-[grey]'}`}>
                                                                 <img src={color.color} height={50} width={50} className="object-contain rounded-[50%]" />
                                                             </div>
                                                             <div className="text-[10px] w-[50px] text-center py-2">{color.name}</div>
@@ -906,7 +906,7 @@ export default function WindowsDoors() {
                                                 <div className="flex flex-wrap gap-3 py-3">
                                                     {ClassicColor.map((color, index) => (
                                                         <div key={index} onClick={() => handleDoorSelection("InternalColor", color)} >
-                                                            <div className={`hover:bg-[#e2f4f4] rounded-[50%] w-[50px] cursor-pointer hover:opacity-75 ${values?.door?.InternalColor?.name === color?.name ? 'border-[2px] border-[orange] bg-[#e2f4f4]' : 'border border-[grey]'}`}>
+                                                            <div className={`hover:bg-[#e2f4f4] rounded-[50%] w-[50px] cursor-pointer hover:opacity-75 ${values?.door?.InternalColor?.name === color?.name ? 'border-[2px] border-[#007fab] bg-[#e2f4f4]' : 'border border-[grey]'}`}>
                                                                 <img src={color.color} height={50} width={50} className="object-contain rounded-[50%]" />
                                                             </div>
                                                             <div className="text-[10px] w-[50px] text-center py-2">{color.name}</div>
@@ -919,7 +919,7 @@ export default function WindowsDoors() {
                                                 <div className="flex  flex-wrap gap-3 pt-3">
                                                     {PremiumColor.map((color, index) => (
                                                         <div key={index} onClick={() => handleDoorSelection("InternalColor", color)} >
-                                                            <div className={`hover:bg-[#e2f4f4] rounded-[50%] w-[50px] cursor-pointer hover:opacity-75 ${values?.door?.InternalColor?.name === color?.name ? 'border-[2px] border-[orange] bg-[#e2f4f4]' : 'border border-[grey]'}`}>
+                                                            <div className={`hover:bg-[#e2f4f4] rounded-[50%] w-[50px] cursor-pointer hover:opacity-75 ${values?.door?.InternalColor?.name === color?.name ? 'border-[2px] border-[#007fab] bg-[#e2f4f4]' : 'border border-[grey]'}`}>
                                                                 <img src={color.color} height={50} width={50} className="object-contain rounded-[50%]" />
                                                             </div>
                                                             <div className="text-[10px] w-[50px] text-center py-2">{color.name}</div>
@@ -942,7 +942,7 @@ export default function WindowsDoors() {
                                         <div className="flex gap-5 py-3">
                                             {DoorsHardwareColors.map((hardware, index) => (
                                                 <div key={index} onClick={() => handleDoorSelection("color", hardware)} >
-                                                    <div className={`hover:bg-[#e2f4f4] rounded-[50%] w-[50px] cursor-pointer hover:opacity-75 ${values?.door?.color?.name === hardware?.name ? 'border-[2px] border-[orange] bg-[#e2f4f4]' : 'border border-[grey]'}`}>
+                                                    <div className={`hover:bg-[#e2f4f4] rounded-[50%] w-[50px] cursor-pointer hover:opacity-75 ${values?.door?.color?.name === hardware?.name ? 'border-[2px] border-[#007fab] bg-[#e2f4f4]' : 'border border-[grey]'}`}>
                                                         <img src={hardware.image} height={50} width={50} className="object-contain rounded-[50%]" />
                                                     </div>
                                                     <div className="text-[10px] w-[50px] text-center py-2">{hardware.name}</div>
@@ -956,7 +956,7 @@ export default function WindowsDoors() {
                                         <div className="flex flex-wrap gap-3 py-3">
                                             {DoorsHandle.map((hardware, index) => (
                                                 <div key={index} onClick={() => handleDoorSelection("handle", hardware)}
-                                                    className={`hover:bg-[#e2f4f4] p-2 cursor-pointer hover:opacity-75 ${values?.door?.handle?.image === hardware?.image ? 'border-[2px] border-[orange] bg-[#e2f4f4]' : ''}`}
+                                                    className={`hover:bg-[#e2f4f4] p-2 cursor-pointer hover:opacity-75 ${values?.door?.handle?.image === hardware?.image ? 'border-[2px] border-[#007fab] bg-[#e2f4f4]' : ''}`}
                                                 >
                                                     <img src={hardware.image} height={50} width={50} className="object-contain" />
                                                     <div className="text-[10px] w-[50px] text-center py-2">{hardware.name}</div>
@@ -968,7 +968,7 @@ export default function WindowsDoors() {
                                         <div className="flex flex-wrap gap-3 py-3">
                                             {DoorsLetterPlate.map((hardware, index) => (
                                                 <div key={index} onClick={() => handleDoorSelection("letterplate", hardware)}
-                                                    className={`hover:bg-[#e2f4f4] p-1 cursor-pointer hover:opacity-75 ${values?.door?.letterplate?.image === hardware?.image ? 'border-[2px] border-[orange] bg-[#e2f4f4]' : ''}`}
+                                                    className={`hover:bg-[#e2f4f4] p-1 cursor-pointer hover:opacity-75 ${values?.door?.letterplate?.image === hardware?.image ? 'border-[2px] border-[#007fab] bg-[#e2f4f4]' : ''}`}
                                                 >
                                                     <img src={hardware.image} height={55} width={55} className="object-contain" />
                                                     <div className="text-[10px] w-[55px] text-center py-2">{hardware.name}</div>
@@ -981,7 +981,7 @@ export default function WindowsDoors() {
                                         <div className="flex flex-wrap gap-3 py-3">
                                             {DoorsKnocker.map((hardware, index) => (
                                                 <div key={index} onClick={() => handleDoorSelection("knocker", hardware)}
-                                                    className={`hover:bg-[#e2f4f4] p-1 cursor-pointer hover:opacity-75 ${values?.door?.knocker?.image === hardware?.image ? 'border-[2px] border-[orange] bg-[#e2f4f4]' : ''}`}
+                                                    className={`hover:bg-[#e2f4f4] p-1 cursor-pointer hover:opacity-75 ${values?.door?.knocker?.image === hardware?.image ? 'border-[2px] border-[#007fab] bg-[#e2f4f4]' : ''}`}
                                                 >
                                                     <img src={hardware.image} height={55} width={55} className="object-contain" />
                                                     <div className="text-[10px] w-[55px] text-center py-2">{hardware.name}</div>
@@ -1000,7 +1000,7 @@ export default function WindowsDoors() {
                                         <div className="flex gap-5 py-3">
                                             {DoorGlasses.map((hardware, index) => (
                                                 <div key={index} onClick={() => handleDoorSelection("glass", hardware)} >
-                                                    <div className={`hover:bg-[#e2f4f4] w-[50px] cursor-pointer hover:opacity-75 ${values?.door?.glass?.name === hardware?.name ? 'border-[2px] border-[orange] bg-[#e2f4f4]' : 'border border-[grey]'}`}>
+                                                    <div className={`hover:bg-[#e2f4f4] w-[50px] cursor-pointer hover:opacity-75 ${values?.door?.glass?.name === hardware?.name ? 'border-[2px] border-[#007fab] bg-[#e2f4f4]' : 'border border-[grey]'}`}>
                                                         <img src={hardware.image} height={50} width={50} className="object-contain" />
                                                     </div>
                                                     <div className="text-[10px] w-[50px] text-center py-2">{hardware.name}</div>
@@ -1179,7 +1179,7 @@ export default function WindowsDoors() {
                 <div className="flex">
                     {sections.map((section) => (
                         <div key={section.id} className={`w-[250px] border border-[#cdcbcb] py-3 px-3 
-                        ${currentstep === section.id ? "bg-[#f7a829] text-white" : "bg-white text-gray-700"} `}>
+                        ${currentstep === section.id ? "bg-[#007fab] text-white" : "bg-white text-gray-700"} `}>
                             <div className={`sm:text-[13px] text-[9px] ${currentstep === section.id ? "" : ""}`}>Step {section.id}</div>
                             <div className={`font-semibold sm:text-[14px] text-[11px] ${currentstep === section.id ? "" : ""}`}>{section.title}</div>
                         </div>
